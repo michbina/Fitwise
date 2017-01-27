@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Cepheus</string>
+    <string name="Firstname_empty">The Firstname is required</string>
+    <string name="Lastname_empty">The Lastname is required</string>
+    <string name="Email_empty">The Email is required</string>
+    <string name="password_empty">The password is required</string>
+    <string name="Gender_error">There is an error with the gender</string>
+    <string name="Username_empty">The Username is required</string>
+    <string name="email_format_error">The email field does not match the format of an email address</string>
+    <string name="email_or_password_empty">The email address and password are required</string>
+    <string name="advice_1">This exercise has to be made with a horizontal bar placed in height.
+Seize the bar, The arms as high as shoulders, palms of hands towards the back. Fire at your arms to go back up your body.</string>
+    <string name="advice_2">The exercise is made sat on a machine with high pulley with a bar.
+        Bust tilted towards the back, the tense arms, to seize the bar. Pull downwards, up to your breast by blowing.</string>
+    <string name="advice_3">The exercise is made sat on the low pulley of the machine.
+Use a rope of edition or a handle V.Sat on the ground, the oblique bust forwards,
+        the tense arms, to seize the handle or the rope of edition.</string>
+    <string name="advice_4">Feet are ruled out by the width of shoulders,
+        hands were crossed around the straight bar or on a triangle of edition.
+        Tilt the bust forward until approximately 45°, by keeping the right back and the bent knees. Go back up the bar
+        at the level of the trunk by making it pass between legs. Return slowly to the initial position.</string>
+    <string name="advice_5">The exercise makes lengthened on a right bench, with a bar.
+The good back with dish on the bench, the feet put on the ground.</string>
+    <string name="advice_6">The exercise makes lengthened on an oblique bench, with a bar.
+The back stuck well on the bench, the feet put on the ground.</string>
+    <string name="advice_7">The exercise makes lengthened on a declined bench, with an angle of 25 ° approximately.
+The load is with a bar.</string>
+    <string name="advice_8">The exercise makes seated, on a machine. The good back has dish on the file of the machine.
+        Arms outspread, place your forearm on supports.Exercise a push by moving closer your to forearm in front of your head.</string>
+    <string name="Try_again">It\'s not the good machine!!! Try again!</string>
+</resources>

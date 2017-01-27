@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cepheustheapp.com.cepheus">
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name=".MainActivity"
+                  android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegistrationForm"
+                  android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Menu"
+                  android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Generic_exercise_free">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Profile"
+                  android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Settings"
+                  android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignUp"
+                  android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".QRcode"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Program"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".Back"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".Exo_1_Back"
+            android:launchMode="singleTask">
+
+        </activity>
+
+        <activity
+            android:name=".Exo_2_Back"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".Exo_3_Back"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".Exo_4_Back"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".Chest"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".Exo_1_Chest"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".Exo_2_Chest"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".Exo_3_Chest"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".Exo_4_Chest"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+        android:name=".Routine"
+        android:launchMode="singleTask">
+        <intent-filter>
+            <action android:name="android.intent.action.SEND"/>
+        </intent-filter>
+        <intent-filter>
+            <action android:name="com.google.zxing.client.android.SCAN"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+    </activity>
+        <activity
+            android:name=".Routine_1"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
