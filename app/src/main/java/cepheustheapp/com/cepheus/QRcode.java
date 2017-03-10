@@ -1,15 +1,11 @@
 package cepheustheapp.com.cepheus;
 
-        import android.content.Context;
         import android.content.Intent;
         import android.graphics.Bitmap;
         import android.graphics.BitmapFactory;
         import android.net.Uri;
         import android.os.Bundle;
         import android.support.v7.app.AppCompatActivity;
-        import android.util.Log;
-        import android.view.Menu;
-        import android.view.MenuItem;
         import android.view.View;
         import android.widget.Button;
         import android.widget.TextView;
@@ -25,11 +21,12 @@ package cepheustheapp.com.cepheus;
         import com.google.zxing.integration.android.IntentIntegrator;
         import com.google.zxing.integration.android.IntentResult;
 
-        import java.io.BufferedInputStream;
-        import java.io.File;
-        import java.io.FileInputStream;
+        import org.json.JSONArray;
+        import org.json.JSONObject;
+
         import java.io.InputStream;
-        import java.net.URL;
+
+        import static android.R.attr.id;
 
 public class QRcode  extends AppCompatActivity implements View.OnClickListener   {
 
@@ -48,6 +45,9 @@ public class QRcode  extends AppCompatActivity implements View.OnClickListener  
     public void onClick(View v)  {
         if(v.getId() == R.id.scan_button){
 
+            //Intent intent2 = new Intent(QRcode.this, Freestyle_machine.class);
+            //intent2.putExtra("id", "backX");
+            //startActivity(intent2);
           new IntentIntegrator(this).initiateScan();
         }
     }
@@ -90,51 +90,78 @@ public class QRcode  extends AppCompatActivity implements View.OnClickListener  
         // get scan result
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
 
-        if (scanningResult != null) {
 
-            // get content
+
+        if (scanningResult != null)
+        {
             String scanContent = scanningResult.getContents();
-
-            // get format
             String scanFormat = scanningResult.getFormatName();
 
             TextView scan_format = (TextView) findViewById(R.id.scan_format);
+            TextView scan_format2 = (TextView) findViewById(R.id.scan_format2);
             TextView scan_content = (TextView) findViewById(R.id.scan_content);
             TextView scan_content2 = (TextView) findViewById(R.id.scan_content2);
+            JSONObject obj=null;
+            try{
 
+                obj= new JSONObject(scanContent);
 
-            //
-            scan_format.setText("FORMAT: " + scanFormat);
-            scan_content.setText("CONTENT: " + scanContent);
+            }catch(Exception e){
 
-            // this could be redundant?
-            if (scanContent.length() > 8) {
-                if (scanContent.substring(0, 7).equals("http://")) {
+            }
+            String id= null;
+            Boolean machineFound = false;
+           // scan_format.setText("FORMAT: " + scanFormat);
+           // scan_content.setText("CONTENT: " + scanContent);
 
-                    Uri uri = Uri.parse(scanContent);
-                    scan_content2.setText("");
-                    Intent intent2 = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent2);
+            try
+            {
+                HttpRequest req = HttpRequest.getInstance();
+                Integer i;
+                JSONArray allMachines= (JSONArray) req.getMachine("all", "data");
+                JSONObject machi [] = new JSONObject[allMachines.length()];
+                String listMachine [] = new String[allMachines.length()];
 
+                for(i=0;i<allMachines.length();i++)
+                {
+                    machi [i] = allMachines.getJSONObject(i);
+                    listMachine [i] =  machi[i].getString("id");
+                    if(obj.get("id").equals(listMachine[i]))
+                    {
+                        machineFound = true;
+                        id=listMachine[i];
+                    }
                 }
+
+            }
+            catch(Exception e)
+            {
+                String b;
+            }
+
+            if(machineFound==true)
+            {
+                Intent intent2 = new Intent(QRcode.this, Freestyle_machine.class);
+                intent2.putExtra("id", id);
+                startActivity(intent2);
             }
             else
             {
-                //test generic exercise
-                if(scanContent.equals("example1"))
-                {
-                    Intent GenericExerciseFreeActivity = new Intent(getApplicationContext(),Generic_exercise_free.class);
-                    GenericExerciseFreeActivity.putExtra(EXTRA_ExerciseName, scanContent);
-                    startActivity(GenericExerciseFreeActivity);
-                }
-                else
-                scan_content2.setText("No activities found, scan the code again");
+                Toast.makeText(getApplicationContext(), R.string.Try_again,
+                        Toast.LENGTH_SHORT).show();
+                scan_format.setText(R.string.Uncorrect_machine);
+                scan_format2.setText(R.string.Scan_again);
             }
+
+            return;
+
+
+
         }
         else{
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "Aucune donnée reçu!", Toast.LENGTH_SHORT);
-            toast.show();
+            Toast.makeText(getApplicationContext(), R.string.Try_again,
+                    Toast.LENGTH_SHORT).show();
+
         }
 
     }}

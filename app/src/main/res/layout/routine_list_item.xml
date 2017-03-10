@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/list_item"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:color/holo_blue_dark">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:layout_margin="1dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/background_light">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+
+
+                    app:srcCompat="@drawable/pull_up"
+                    android:id="@+id/image"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Routine 1"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/routine_name"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="24sp" />
+
+                    <!--<ImageButton android:id="@+id/favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="40dp"
+                        android:maxHeight="40dp"
+                        android:scaleType="fitCenter"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/starblue"
+                        android:background="#FFFFFF"
+                        android:onClick="onToggleStar"/>-->
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/routine_desc_heading"
+                    android:text="Description:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textStyle="normal|bold|italic" />
+                    <!--android:paddingLeft="10dp"-->
+
+                <TextView
+                    android:id="@+id/routine_desc"
+                    android:text="This routine does something"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                    <!--android:paddingLeft="20dp"-->
+
+
+                <TextView
+                    android:id="@+id/machine_heading"
+                    android:text="Machine List:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingTop="4dp"
+                    android:textStyle="normal|bold|italic" />
+                    <!--android:paddingLeft="10dp"-->
+
+                <TextView
+                    android:id="@+id/machines"
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                    <!--android:paddingLeft="20dp"-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

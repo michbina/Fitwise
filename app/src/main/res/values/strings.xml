@@ -1,11 +1,19 @@
 <resources>
-    <string name="app_name">Cepheus</string>
+    <string name="app_name">Fitwise</string>
+    <string name="routine">Routine : </string>
+    <string name="forgotPassword">Write your email address below, a temporary password will be sent </string>
+    <string name="select">Select a Routine...</string>
     <string name="Firstname_empty">The Firstname is required</string>
     <string name="Lastname_empty">The Lastname is required</string>
     <string name="Email_empty">The Email is required</string>
     <string name="password_empty">The password is required</string>
+    <string name="Weight_empty">The Weight is required</string>
+    <string name="Height_empty">The Height is required</string>
+    <string name="Age_empty">The Age is required</string>
+    <string name="Checked_error">Check a Routine please!</string>
     <string name="Gender_error">There is an error with the gender</string>
     <string name="Username_empty">The Username is required</string>
+    <string name="Authentication_code_incorrect">The Authentication code is incorrect</string>
     <string name="email_format_error">The email field does not match the format of an email address</string>
     <string name="email_or_password_empty">The email address and password are required</string>
     <string name="advice_1">This exercise has to be made with a horizontal bar placed in height.
@@ -27,5 +35,7 @@ The back stuck well on the bench, the feet put on the ground.</string>
 The load is with a bar.</string>
     <string name="advice_8">The exercise makes seated, on a machine. The good back has dish on the file of the machine.
         Arms outspread, place your forearm on supports.Exercise a push by moving closer your to forearm in front of your head.</string>
-    <string name="Try_again">It\'s not the good machine!!! Try again!</string>
+    <string name="Try_again">That is not the correct machine,scan again please!!!</string>
+    <string name="Uncorrect_machine">That is not the correct machine.</string>
+    <string name="Scan_again">Scan again please!!!</string>
 </resources>

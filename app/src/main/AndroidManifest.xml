@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/fitwise_logo_transparency"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -49,7 +49,7 @@
                 <action android:name="android.intent.action.SEND"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp"
+        <activity android:name=".ForgotPassword"
                   android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.SEND"/>
@@ -66,49 +66,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Program"
-            android:launchMode="singleTask"/>
+            android:name=".Freestyle_machine"
+            android:launchMode="singleTask">
+
+        </activity>
         <activity
-            android:name=".Back"
-            android:launchMode="singleTask"/>
-        <activity
-            android:name=".Exo_1_Back"
+            android:name=".Routine_machine"
             android:launchMode="singleTask">
 
         </activity>
 
-        <activity
-            android:name=".Exo_2_Back"
-            android:launchMode="singleTask">
-        </activity>
-        <activity
-            android:name=".Exo_3_Back"
-            android:launchMode="singleTask">
-        </activity>
-        <activity
-            android:name=".Exo_4_Back"
-            android:launchMode="singleTask">
-        </activity>
-        <activity
-            android:name=".Chest"
-            android:launchMode="singleTask">
-        </activity>
-        <activity
-            android:name=".Exo_1_Chest"
-            android:launchMode="singleTask">
-        </activity>
-        <activity
-            android:name=".Exo_2_Chest"
-            android:launchMode="singleTask">
-        </activity>
-        <activity
-            android:name=".Exo_3_Chest"
-            android:launchMode="singleTask">
-        </activity>
-        <activity
-            android:name=".Exo_4_Chest"
-            android:launchMode="singleTask">
-        </activity>
         <activity
         android:name=".Routine"
         android:launchMode="singleTask">
@@ -121,7 +88,7 @@
         </intent-filter>
     </activity>
         <activity
-            android:name=".Routine_1"
+            android:name=".Routine_scan"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.SEND"/>
@@ -131,6 +98,19 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".routine_list"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

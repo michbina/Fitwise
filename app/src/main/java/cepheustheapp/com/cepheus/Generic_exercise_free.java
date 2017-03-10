@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -92,6 +93,23 @@ public class Generic_exercise_free extends YouTubeBaseActivity {
             public void onClick(View v) {
                 Intent MenuActivity = new Intent(getApplicationContext(), Menu.class);
                 startActivity(MenuActivity);
+            }
+        });
+        final ImageButton favorite = (ImageButton) findViewById(R.id.favorite);
+        favorite.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.starimage));
+
+        favorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setSelected(!v.isSelected());
+
+                if (v.isSelected()) {
+                    favorite.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.starblue));
+
+                } else {
+                    favorite.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.starimage));
+                }
+
             }
         });
 
