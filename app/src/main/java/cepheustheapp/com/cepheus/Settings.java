@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-/**
- * Created by Lio on 2016-12-19.
- */
+
 public class Settings extends Activity{
 
     @Override
