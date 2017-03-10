@@ -10,7 +10,8 @@
         android:text="Email:"
         android:textColor="#000"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:id="@+id/textView2" />
 
     <TextView
         android:id="@+id/email_display"

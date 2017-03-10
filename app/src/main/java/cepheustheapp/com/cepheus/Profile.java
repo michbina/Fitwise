@@ -14,7 +14,9 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-
+/**
+ * Created by Lio on 2016-12-19.
+ */
 public class Profile extends Activity{
 
 
